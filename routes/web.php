@@ -31,13 +31,14 @@ require __DIR__.'/auth.php';
 
 Route::get('/product', [HomeController::class, 'product']);
 Route::get('/ProductDitiles/{id}', [HomeController::class, 'ProductDitiles']);
+
 Route::post("/add_to_cart/{id}", [HomeController::class,"add_to_cart"]);
 
 
 
 
-
-
+Route::get("/ShowCart", [HomeController::class,"ShowCart"]);
+Route::get("/remove_cart/{id}", [HomeController::class,"remove_cart"]);
 
 
 

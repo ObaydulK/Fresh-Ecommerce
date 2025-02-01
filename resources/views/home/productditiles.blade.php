@@ -37,6 +37,14 @@
         <h4>Product Catagory : {{$product->category}}</h4>
         <h4>Product Quality : {{$product->quantity}}</h4>
         <h4>Product Last Update : {{$product->updated_at}}</h4>
+        
+        <form action="{{url('add_to_cart', $product->id)}}" method="post">
+            @csrf
+            <div class="flex items-center justify-between">
+                <input class="w-[50%]" type="number" name="quantity" value="1" min="1" id="">
+                <input type="submit" value="Add to Cart" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            </div>
+        </form>
     </div>
 </div>
 @endsection

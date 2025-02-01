@@ -33,7 +33,7 @@
                     </li>
 
                     <li>
-                        <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+                        <a class="text-gray-500 transition hover:text-gray-500/75" href="{{url('ShowCart')}}"> Card </a>
                     </li>
                 </ul>
             </nav>

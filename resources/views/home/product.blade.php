@@ -7,8 +7,8 @@
     @foreach ($products as $product)
     <section class="product_section layout_padding">
         <div class="container">
-            <div class="img-box relative">
-                <img src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
+            <div class="img-box flex justify-center relative">
+                <img class="w-[200px] h-[200px]" src="{{url('/product', $product->image)}}"
                     alt="">
             </div>
             <div class="px-5 pb-5">
