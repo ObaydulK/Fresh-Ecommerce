@@ -29,37 +29,6 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('/product', [HomeController::class, 'product']);
-Route::get('/ProductDitiles/{id}', [HomeController::class, 'ProductDitiles']);
-
-Route::post("/add_to_cart/{id}", [HomeController::class,"add_to_cart"]);
-
-
-
-
-Route::get("/ShowCart", [HomeController::class,"ShowCart"]);
-Route::get("/remove_cart/{id}", [HomeController::class,"remove_cart"]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/table', [AdminController::class,'table']);
 Route::get('/chart', [AdminController::class,'chart']);
 
@@ -84,6 +53,27 @@ Route::get('/add_product_destroy/{id}', [ProductController::class,'add_product_d
 
 
 
+
+
+
+
+Route::get('/product', [HomeController::class, 'product']);
+Route::get('/ProductDitiles/{id}', [HomeController::class, 'ProductDitiles']);
+
+Route::post("/add_to_cart/{id}", [HomeController::class,"add_to_cart"]);
+
+
+
+
+Route::get("/ShowCart", [HomeController::class,"ShowCart"]);
+Route::get("/remove_cart/{id}", [HomeController::class,"remove_cart"]);
+
+Route::get("/order", [HomeController::class,"order"]);
+
+Route::get('/stripe/{totalprice}', [HomeController::class,'stripe']);
+
+
+Route::post('stripe/{totalprice}', [HomeController::class,'stripePost'])->name('stripe.post');
 
 
 
