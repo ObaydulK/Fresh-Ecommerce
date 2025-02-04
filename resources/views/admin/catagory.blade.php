@@ -25,7 +25,7 @@
                     </div>
                     @endif
 
-                    <div class="text-center">
+                    <div class=" text-center">
                         <h2>Add Catagory</h2>
                         <form action="{{url('/add_catagory')}}" method="post">
                             @csrf
@@ -37,7 +37,7 @@
                             </div>
                         </form>
                         <hr>
-                        <table class="-10">
+                        <table class="m-auto justify-between ">
                             <thead>
                                 <tr class=" ">
                                     <td class="px-4">Id</td>

@@ -34,7 +34,7 @@
             <h5 class="text-blue-500">Price
             ${{$product->price}}</h5>
         @endif
-        <h4>Product Catagory : {{$product->category}}</h4>
+        <h4 class="text-gray-700 font-bold uppercase  p-2 border">Product Catagory : {{$product->category}}</h4>
         <h4>Product Quality : {{$product->quantity}}</h4>
         <h4>Product Last Update : {{$product->updated_at}}</h4>
         
@@ -47,4 +47,17 @@
         </form>
     </div>
 </div>
+ 
+ 
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Id</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Name</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Email</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Product_Title</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Quantity</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Price</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Payment</div>
+        <div  class="text-gray-700 font-bold uppercase  p-2 border">Deliver</div>
+        <div  class="text-gray-700 font-bold uppercase   p-2 border">Created</div>
+ 
+ 
 @endsection

@@ -20,6 +20,9 @@ class HomeController extends Controller
         return view("home.product");
     }
 
+
+    
+
     public function ProductDitiles($id)
     {
         $product = Product::find($id);

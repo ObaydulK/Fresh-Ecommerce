@@ -89,11 +89,11 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="{{url('/table')}}">
+            <a class="nav-link" href="{{url('/ordershowlist')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>
-              <span class="menu-title">Tables</span>
+              <span class="menu-title">Order List</span>
             </a>
           </li>
           <li class="nav-item menu-items">
