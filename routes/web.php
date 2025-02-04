@@ -9,15 +9,17 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    $products = Product::all();
-    return view('welcome', compact('products'));
-});
+// Route::get('/', function () {
+//     $products = Product::all();
+//     return view('welcome', compact('products'));
+// });
 
+Route::get('/', [HomeController::class, 'fronthome']);
+// Route::get('/home', function () {
+//     return view('admin/home');
+// })->middleware(['auth','verified'] )->name('home');
 
-Route::get('/home', function () {
-    return view('admin/home');
-})->middleware(['auth','verified'] )->name('home');
+Route::get('/Dashbord',[AdminController::class, 'admindeshbord'])->middleware(['auth','verified'] )->name('Dashbord');
 
 
 

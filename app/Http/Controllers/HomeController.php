@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -14,14 +15,15 @@ use Illuminate\Http\RedirectResponse;
 class HomeController extends Controller
 {
     //
-    public function product()
-    {
-
-        return view("home.product");
+    public function fronthome(){
+        $products = Product::all();
+        return view('home.home', compact('products'));
     }
 
-
-    
+    public function product()
+    {
+        return view("home.product");
+    }
 
     public function ProductDitiles($id)
     {
