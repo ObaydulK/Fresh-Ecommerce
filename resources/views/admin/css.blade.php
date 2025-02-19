@@ -19,3 +19,5 @@
 <!-- Layout styles -->
 <link rel="stylesheet" href="admin/assets/css/style.css">
 <!-- End layout styles -->
+<!-- Styles / Scripts -->
+@vite(['resources/css/app.css', 'resources/js/app.js'])

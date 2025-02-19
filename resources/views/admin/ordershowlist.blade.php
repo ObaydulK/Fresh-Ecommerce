@@ -5,6 +5,8 @@
     <!-- all style file & link start -->
     @include('admin.css')
     <!-- all style file & link end -->
+    <!-- Styles / Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -62,7 +64,11 @@
                                         <td class="border p-2">{{$order->payment_status}}</td>
                                         <td class="border p-2">{{$order->deliver_status}}</td>
                                         <td class="border p-2">{{$order->created_at}}</td>
-                                        <td> <img class="h-48 w-96 object-scale-down" src="/product/{{$order->image}}" alt=""></td>
+                                        <td  > 
+                                            <div class="h-[100px] w-[100px] ">
+                                                <img class="size-24 object-center"  src="/product/{{$order->image}}" alt="">
+                                            </div>
+                                        </td>
                                         
                                         <td class="border p-2">
                                             @if ($order->deliver_status=='Processing')

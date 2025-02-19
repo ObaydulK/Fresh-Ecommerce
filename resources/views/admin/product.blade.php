@@ -33,44 +33,46 @@
                                     <!-- Card -->
                                     <div class="  rounded-xl p-4 sm:p-6 lg:p-8 dark:border-neutral-700">
 
-                                        <form action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">
+                                        <form class="border inline-block items-start" action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">
                                             @csrf
-                                            <div>
-                                                <label for="">title</label>
-                                                <input type="text" name="title" placeholder="Enter you title" required>
+                                            
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">title</label>
+                                                <input class=" rounded p-2 w-50% my-2 text-black col-span-8" type="text" name="title" placeholder="Enter you title" required>
                                             </div>
-                                            <div>
-                                                <label for="">description</label>
-                                                <input type="text" name="description"
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">description</label>
+                                                <input class=" rounded p-2 w-50% my-2 text-black col-span-8" type="text" name="description"
                                                     placeholder="Enter you description" required>
                                             </div>
-                                            <div>
-                                                <label for="">image</label>
-                                                <input type="file" name="image" placeholder="Enter you image" required>
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">price</label>
+                                                <input class=" rounded p-2 w-50% my-2 text-black col-span-8" type="text" name="price" placeholder="Enter you price" required>
                                             </div>
-                                            <div>
-                                                <label for="">price</label>
-                                                <input type="text" name="price" placeholder="Enter you price" required>
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">quantity</label>
+                                                <input class=" rounded p-2 w-50% my-2 text-black col-span-8" type="text" name="quantity" placeholder="Enter you quantity" required>
                                             </div>
-                                            <div>
-                                                <label for="">quantity</label>
-                                                <input type="text" name="quantity" placeholder="Enter you quantity" required>
-                                            </div>
-                                            <div>
-                                                <label for="">catagory</label>
-                                                <select name="category" id="">
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">catagory</label>
+                                                <select class=" rounded p-2 w-50% my-2 text-black col-span-8"  name="category" id="">
                                                     <option value="" selected="">Add a catagory</option>
                                                     @foreach ($categories  as $categorie)
                                                     <option value="{{$categorie->Category_Name}}">{{$categorie->Category_Name}}</option> 
                                                     @endforeach
                                                 </select> 
                                             </div>
-                                            <div>
-                                                <label for="">discount_price</label>
-                                                <input type="text" name="discount_price"
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">discount_price</label>
+                                                <input class=" rounded p-2 w-50% my-2 text-black col-span-8" type="text" name="discount_price"
                                                     placeholder="Enter you discount_price" required>
                                             </div>
-                                            <button type="submit">Submit</button>
+                                            
+                                            <div class="grid grid-flow-col items-center  gap-3 ">
+                                                <label class=" w-50%   w-full col-span-4 text-capitalize  " for="">image</label>
+                                                <input class=" rounded w-[100px] p-2 w-50% my-2 text-black col-span-8" type="file" name="image" placeholder="Enter you image" required>
+                                            </div>
+                                            <button class="btn bg-red-600 w-full" type="submit">Submit</button>
                                         </form>
                                     </div>
                                     <!-- End Card -->

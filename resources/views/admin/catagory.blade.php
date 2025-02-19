@@ -5,6 +5,9 @@
     <!-- all style file & link start -->
     @include('admin.css')
     <!-- all style file & link end -->
+    
+    <!-- Styles / Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
@@ -29,11 +32,11 @@
                         <h2>Add Catagory</h2>
                         <form action="{{url('/add_catagory')}}" method="post">
                             @csrf
-                            <div class="">
-                                <label for="">Catagory Name</label>
-                                <input class="w-full" type="text" name="Category"
+                            <div class="grid grid-flow-col items-center py-10 gap-2">
+                                <label class="col-span-2">Catagory Name</label>
+                                <input class="col-span-8 rounded p-2" type="text" name="Category"
                                     placeholder="Enter your Category Name">
-                                <button class="" type="submit">Submit</button>
+                                <button class="col-span-2 btn btn-secondary" type="submit">Submit</button>
                             </div>
                         </form>
                         <hr>
